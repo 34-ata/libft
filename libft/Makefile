@@ -8,7 +8,7 @@ RM = rm -f
 NAME = libft.a
 
 .c.o:
-	${COMPILER} ${COMP_FLAGS} -c $^
+	${COMPILER} ${COMP_FLAGS} -c ${SRCS}
 
 ${NAME}: ${OBJECTS}
 	${LIBC} ${NAME} ${OBJECTS}
