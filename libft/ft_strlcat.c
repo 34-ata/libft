@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:23:25 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/13 12:54:35 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/13 14:37:22 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-
-
