@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:20:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/12 20:20:25 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/14 11:49:00 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	*ft_memmove(void	*dst, const void	*src, size_t len)
 		*d++ = *s++;
 	return (dst);
 }
-/* bellek alanlarında oluşabilecek çakışmaları 
- * if kontrolü ile değerlendiriyoruz. 
- * Eğer source'un bellek adresi destination'ın bellek adresinden 
-önce geliyorsa (örneğin [ft_memmove(src + 3, src, 7)])
-yazmaya sondan başlıyoruz. 
-Eğer source'un bellek alanı destination'ın bellek adresinden sonra geliyorsa 
-kopyalamaya en baştan başlayıp len kadar byte'ı kopyalıyoruz. */

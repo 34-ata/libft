@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:20:18 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/12 20:20:23 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/14 17:49:00 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,3 @@ void	*ft_memcpy(void	*dest, const void	*src, size_t n)
 	}
 	return (dest);
 }
-/* Memcpy fonksiyonunda memmove'dan farklı olarak adreslerin 
- * çakışıp çakışmadığına bakmaksızın bir adresdeki değeri diğerine kopyalıyoruz.
-Bu yüzden memcpy fonksiyonunda belirsiz durumlar 
-("undefined behaviour") ile karşılaşma ihtimalimiz daha yüksek. */
