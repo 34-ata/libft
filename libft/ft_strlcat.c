@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:23:25 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/13 21:39:10 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/15 19:38:44 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,11 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 {
-	size_t	i;
-	size_t	j;
+	size_t	b;
 
-	i = 0;
-	j = 0;
-	while (dst[i] && i < sz)
-		i++;
-	while (src[j] && (i + j + 1) < sz)
-	{
-		dst[i + j] = src[j];
-		j++;
-	}
-	if (i < sz)
-		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+	b = ft_strlen(dst) + ft_strlen(src);
+	if (sz <= ft_strlen(dst))
+		return (sz + ft_strlen(src));
+	ft_strlcpy (dst + ft_strlen(dst), src, sz - ft_strlen(dst));
+	return (b);
 }

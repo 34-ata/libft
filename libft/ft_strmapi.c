@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:24:09 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/12 20:20:59 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/16 17:29:20 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ char	*ft_strmapi(char const	*s, char (*f)(unsigned int, char))
 		res[index] = f(index, s[index]);
 		index++;
 	}
-	res[index] = '\0';
-	return (res);
+	return (res[index] = '\0', res);
 }

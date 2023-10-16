@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:23:38 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/13 19:38:30 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/16 17:25:33 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,15 @@
 
 size_t	ft_strlcpy(char	*dest, const char	*src, size_t sz)
 {
-	unsigned int	i;
-	unsigned int	x;
+	size_t	i;
 
-	x = ft_strlen(src);
 	i = 0;
-	if (sz != 0)
+	if (!sz)
+		return (ft_strlen(src));
+	while (src[i] && i < sz - 1)
 	{
-		while (src [i] != '\0' && i < sz - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dest[i] = src[i];
+		i++;
 	}
-	return (x);
+	return (dest[i] = '\0', ft_strlen(src));
 }

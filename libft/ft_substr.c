@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:25:20 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/12 20:21:04 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/16 18:34:55 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,11 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	size;
 
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
+	if (!s || start >= ft_strlen(s))
 		return (ft_strdup(""));
-	size = ft_strlen(s + start);
-	if (size < len)
-		len = size;
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);

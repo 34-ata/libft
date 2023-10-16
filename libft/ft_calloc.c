@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:18:17 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/12 20:19:19 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/16 14:24:04 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	return (ft_bzero(ptr, count * size), ptr);
 }

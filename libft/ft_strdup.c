@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:22:45 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/13 18:43:28 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/15 18:25:30 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,10 @@
 char	*ft_strdup(const char	*src)
 {
 	char	*dest;
-	int		i;
 
-	i = 0;
 	dest = (char *)malloc(sizeof(char) * ft_strlen(src) + 1);
-	i = 0;
-	if (dest)
-	{
-		while (src[i])
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-		return (dest);
-	}
-	return (0);
+	if (!dest)
+		return (NULL);
+	ft_strlcpy(dest, src, ft_strlen(src) + 1);
+	return (dest);
 }

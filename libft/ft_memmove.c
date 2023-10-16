@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:20:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/14 11:49:00 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/15 19:52:13 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,13 @@
 
 void	*ft_memmove(void	*dst, const void	*src, size_t len)
 {
-	char	*d;
-	char	*s;
-
-	d = (char *)dst;
-	s = (char *)src;
-	if (dst == src)
+	if ((char *)dst == (char *)src)
 		return (dst);
-	if (s < d)
+	if ((char *)src < (char *)dst)
 	{
 		while (len--)
-			*(d + len) = *(s + len);
+			*(char *)(dst + len) = *(char *)(src + len);
 		return (dst);
 	}
-	while (len--)
-		*d++ = *s++;
-	return (dst);
+	return (ft_memcpy(dst, src, len));
 }
