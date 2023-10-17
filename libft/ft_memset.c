@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:20:47 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/16 14:31:38 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/17 13:20:45 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memset(void	*str, int c, size_t n)
 {
 	while (n--)
-		*(unsigned char *)(str + n) = (unsigned char)c;
+		*(char *)(str + n) = (char)c;
 	return (str);
 }
